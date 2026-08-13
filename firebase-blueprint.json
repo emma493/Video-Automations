@@ -1,0 +1,77 @@
+{
+  "entities": {
+    "videos": {
+      "title": "Video",
+      "description": "Video upload tasks queue",
+      "type": "object",
+      "properties": {
+        "id": { "type": "number" },
+        "source_url": { "type": "string" },
+        "source_domain": { "type": "string" },
+        "title": { "type": "string" },
+        "scheduled_time": { "type": "string" },
+        "timezone": { "type": "string" },
+        "schedule_type": { "type": "string" },
+        "recurring_frequency": { "type": "string" },
+        "status": { "type": "string" },
+        "upload_count": { "type": "number" },
+        "last_upload_time": { "type": "string", "nullable": true },
+        "created_at": { "type": "string" },
+        "updated_at": { "type": "string" },
+        "error_message": { "type": "string", "nullable": true },
+        "fikfap_post_url": { "type": "string", "nullable": true },
+        "is_active": { "type": "boolean" },
+        "max_retries": { "type": "number" },
+        "retry_count": { "type": "number" }
+      },
+      "required": ["id", "source_url", "title", "status", "is_active"]
+    },
+    "upload_history": {
+      "title": "UploadHistory",
+      "description": "History of video upload execution runs",
+      "type": "object",
+      "properties": {
+        "id": { "type": "number" },
+        "video_id": { "type": "number" },
+        "upload_time": { "type": "string" },
+        "status": { "type": "string" },
+        "fikfap_post_url": { "type": "string", "nullable": true },
+        "error_message": { "type": "string", "nullable": true },
+        "video_url_captured": { "type": "string", "nullable": true }
+      },
+      "required": ["id", "video_id", "upload_time", "status"]
+    },
+    "bot_logs": {
+      "title": "BotLog",
+      "description": "Execution log messages",
+      "type": "object",
+      "properties": {
+        "id": { "type": "number" },
+        "video_id": { "type": "number", "nullable": true },
+        "level": { "type": "string" },
+        "message": { "type": "string" },
+        "timestamp": { "type": "string" }
+      },
+      "required": ["id", "level", "message", "timestamp"]
+    },
+    "system_settings": {
+      "title": "SystemSettings",
+      "description": "Bot automation configuration settings",
+      "type": "object",
+      "properties": {
+        "max_concurrent_uploads": { "type": "number" },
+        "default_title": { "type": "string" },
+        "retry_attempts": { "type": "number" },
+        "cloudflare_max_retries": { "type": "number" },
+        "upload_timeout_seconds": { "type": "number" },
+        "target_email": { "type": "string" },
+        "target_password": { "type": "string" },
+        "source_url_default": { "type": "string" },
+        "target_url_default": { "type": "string" },
+        "updated_at": { "type": "string" },
+        "bot_paused": { "type": "boolean" }
+      },
+      "required": ["max_concurrent_uploads", "target_email"]
+    }
+  }
+}

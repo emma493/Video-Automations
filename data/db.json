@@ -1,0 +1,22 @@
+{
+  "videos": [],
+  "upload_history": [],
+  "bot_logs": [],
+  "settings": {
+    "id": 1,
+    "max_concurrent_uploads": 1,
+    "default_title": "Link in Bio💖",
+    "retry_attempts": 3,
+    "cloudflare_max_retries": 5,
+    "upload_timeout_seconds": 120,
+    "target_email": "peprahe8933@gmail.com",
+    "target_password": "emma7233",
+    "source_url_default": "https://www.xxxfollow.com",
+    "target_url_default": "https://fikfap.com/upload/url",
+    "updated_at": "2026-08-13T18:02:12.940Z",
+    "bot_paused": false
+  },
+  "next_video_id": 1,
+  "next_history_id": 1,
+  "next_log_id": 1
+}
